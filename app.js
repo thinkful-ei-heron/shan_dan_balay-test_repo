@@ -1,6 +1,6 @@
 'use strict';
 
-function getYearOfBirth (age) {
+/*function getYearOfBirth (age) {
   return 2019 - age;
 }
 
@@ -25,4 +25,12 @@ try {
   console.log(greeting1);
 } catch(err) {
   console.log(err);
+}*/
+
+function jediName(firstName, lastName) {
+  let first = firstName.slice(0, 2);
+  let last = lastName.slice(0, 3);
+  return `${last}${first}`;
 }
+
+console.log(jediName('balay', 'aydemir'));
