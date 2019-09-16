@@ -35,7 +35,7 @@ try {
 
 console.log(jediName('balay', 'aydemir'));*/
 
-function beyond(num) {
+/*function beyond(num) {
   if (num === Number.POSITIVE_INFINITY || num === Number.NEGATIVE_INFINITY) {
     return 'And beyond';
   }
@@ -50,4 +50,30 @@ function beyond(num) {
   }
 }
 
-console.log(beyond(Number.POSITIVE_INFINITY));
+console.log(beyond(Number.POSITIVE_INFINITY));*/
+
+function decode(word) {
+  if (word.charAt(0) > 'd') {
+    return ' ';
+  }
+  if (word.charAt(0) === 'a') {
+    return word.charAt(1);
+  }
+  if (word.charAt(0) === 'b') {
+    return word.charAt(2);
+  }
+  if (word.charAt(0) === 'c') {
+    return word.charAt(3);
+  }
+  if (word.charAt(0) === 'd') {
+    return word.charAt(4);
+  }
+}
+
+let str = 'craft block argon meter bells brown croon droop';
+let arr = str.split(' ');
+for (let i = 0; i < arr.length; i++) {
+  console.log(decode(arr[i]));
+}
+
+
