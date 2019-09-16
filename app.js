@@ -1,6 +1,9 @@
 'use strict';
 
 function getYearOfBirth (age) {
+    if (age < 0 ){
+        throw new Error ("Age can not be negative");
+    } 
     return 2019 - age;
 }
 
@@ -10,6 +13,9 @@ function createGreeting(name, age) {
 }
 
 
-
-const greeting1 = createGreeting('Shannon', 27);
+try {
+const greeting1 = createGreeting('Shannon', -10);
 console.log(greeting1);
+} catch(err) {
+    console.log(err);
+}
