@@ -95,4 +95,29 @@ function daysInMonth(month, leapYear) {
   }
 }
 
-console.log(daysInMonth('February', true));
+function rps(num) {
+  const randomNo = Math.floor(Math.random() * 3) + 1;
+  console.log('Computer threw ' + randomNo);
+
+  if (num > 3 || num <= 0) {
+    throw new Error('Entry is not a number between 1 and 3');
+  }
+  if (num === 1) {
+    if (randomNo === 1) return 'Tie';
+    if (randomNo !== 2) return 'Winner!';
+  }
+  if (num === 2) {
+    if (randomNo === 2) return 'Tie';
+    if (randomNo !== 3) return 'Winner!';
+  }
+  if (num === 3) {
+    if (randomNo === 3) return 'Tie';
+    if (randomNo !== 1) return 'Winner!';
+  }
+
+  return 'Loser';
+}
+
+console.log(rps(1));
+console.log(rps(2));
+console.log(rps(3));
