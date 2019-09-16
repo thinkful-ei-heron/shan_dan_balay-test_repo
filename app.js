@@ -27,10 +27,27 @@ try {
   console.log(err);
 }*/
 
-function jediName(firstName, lastName) {
+/*function jediName(firstName, lastName) {
   let first = firstName.slice(0, 2);
   let last = lastName.slice(0, 3);
   return `${last}${first}`;
 }
 
-console.log(jediName('balay', 'aydemir'));
+console.log(jediName('balay', 'aydemir'));*/
+
+function beyond(num) {
+  if (num === Number.POSITIVE_INFINITY || num === Number.NEGATIVE_INFINITY) {
+    return 'And beyond';
+  }
+  if (num > 0) {
+    return 'To infinity';
+  }
+  if (num < 0) {
+    return 'To negative infinity';
+  }
+  if (num === 0) {
+    return 'Staying home';
+  }
+}
+
+console.log(beyond(Number.POSITIVE_INFINITY));
