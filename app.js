@@ -50,7 +50,7 @@ console.log(jediName('balay', 'aydemir'));*/
   }
 }
 
-console.log(beyond(Number.POSITIVE_INFINITY));*/
+console.log(beyond(Number.POSITIVE_INFINITY));
 
 function decode(word) {
   if (word.charAt(0) > 'd') {
@@ -75,5 +75,24 @@ let arr = str.split(' ');
 for (let i = 0; i < arr.length; i++) {
   console.log(decode(arr[i]));
 }
+*/
 
+function daysInMonth(month, leapYear) {
+  switch (month) {
+    case 'February':
+      if (leapYear) return 29;
+      return 28;
+    case 'April':
+      return 30;
+    case 'June':
+      return 30;
+    case 'September':
+      return 30;
+    case 'November':
+      return 30;
+    default:
+      return 31;
+  }
+}
 
+console.log(daysInMonth('February', true));
